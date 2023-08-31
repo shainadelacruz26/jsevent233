@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <!--onload and onunload-->
+    <body onload="promptName()" >
+
+
+        <script>
+        function promptName()
+        {
+            var userName = prompt("What's your name ?", "")
+            return userName;
+        }
+
+        function goodBye()
+        {
+            alert("Goodbye, " + promptName() + "!");
+        }
+
+        window.onunload = goodBye();
+
+        </script>
+
+    
+    <!--on mouseover and on mouseout-->
+    <h2>The onmouseover and onmouseout Event</h2>
+
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="pic2.jpg" alt="Smiley" width="32" height="32">
+
+
+    <script>
+    function bigImg(x) {
+    x.style.height = "450px";
+    x.style.width = "450px";     
+    }
+
+    function normalImg(x) {
+    x.style.height = "200px";
+    x.style.width = "200px";
+    }
+    </script>
+
+    <!--On mouseup-->
+
+    <h2>The onmouseup Event</h2>
+    <p id="myP"  onmouseup="mouseUp()"> The mouseUp() function sets the color of this text to blue.</p>
+ 
+    <script>
+
+     function mouseUp() {
+   document.getElementById("myP").style.color = "blue";
+    }
+    </script>
+    </body>
+</html>
